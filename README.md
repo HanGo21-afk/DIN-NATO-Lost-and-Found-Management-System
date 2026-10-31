@@ -1,4 +1,4 @@
-# DIN NATO: Loss and Found Management System
+# DIN NATO: Lost and Found Management System
 
 A Java desktop application for managing lost and found items. People report lost items, staff register found items, and owners can claim found items. Data is stored in a MySQL database.
 
