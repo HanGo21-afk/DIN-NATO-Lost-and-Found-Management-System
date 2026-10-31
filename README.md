@@ -55,7 +55,6 @@ DIIN_NATO/
 ├── lib/             mysql-connector-j-9.7.0.jar
 ├── database/        din_nato.sql
 ├── db.properties    (your own database login, not uploaded to Git)
-├── PROGRESS.md
 └── README.md
 ```
 
