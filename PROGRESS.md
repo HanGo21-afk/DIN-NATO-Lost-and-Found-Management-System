@@ -1,7 +1,7 @@
 # DIN NATO: Progress Tracker
 
 **Last updated:** 2026-10-29
-**Current step:** Milestone complete (Steps 2 to 7). Next: upload to GitHub as a backup.
+**Current step:** Milestone complete (Steps 2 to 7) and uploaded to GitHub: https://github.com/HanGo21-afk/DIN-NATO-Loss-and-Found-Management-System (public). Next: record the demo video; deferred features are optional.
 **Honest status:** Users, items, and claims are all saved in MySQL (verified: records survive an app restart; claim create, approve, and reject each saved correctly). ISSUE-06 is fixed: Found items can only become Pending Claim or Claimed through the Claims screen (verified). Database errors now show a clear dialog (startup check and a global handler in `Main`). Approve and Reject now ask for confirmation. The core database work (Steps 2 to 6) is done and verified, and Step 7 (testing, cleanup, README) is finished. The deferred features listed in the Issues log are not built.
 
 **Legend:** [x] verified | [~] exists in code, reviewed but not tested by us | [ ] not done
@@ -119,7 +119,7 @@ Found by reading the GUI code. None of these were reproduced by running the app 
 | ISSUE-16 | Watch item: the item and claim tables map a clicked row straight to the list position. If table sorting is ever turned on, this must use `convertRowIndexToModel`. (`UIStyles` not reviewed yet.) | `ItemsPanel`, `ClaimsPanel` |
 
 ### Minor notes
-- GitHub backup: private repository. Upload `src`, `lib`, `README.md`, `PROGRESS.md`, and `database/din_nato.sql`. Never upload `db.properties` (password) or `.DS_Store` files. Web upload ignores `.gitignore`, so leave them out by hand.
+- GitHub backup (done): the repository is public so it can be shown in the demo video. It holds `src`, `lib`, `database/din_nato.sql`, `README.md`, `PROGRESS.md`, and `.gitignore`. `db.properties` (the MySQL password) is not in it and must never be uploaded. To update the repository later, run `git add .`, `git commit -m "message"`, and `git push` from the project folder.
 - The starter accounts `admin` and `student` were deleted from the database. Current users: `HanGO` (Admin) and `staff1` (Staff). The first-run code in `UserService` only recreates the starters when the `users` table is completely empty (documented in the README).
 - Project lives inside OneDrive. One new file briefly disappeared during setup. If files vanish again, move the project outside OneDrive.
 - Mac leftover files (`._*`, `.DS_Store`) were deleted and are now in `.gitignore`.
